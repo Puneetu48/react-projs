@@ -6,8 +6,9 @@ function App() {
   return (
     <main>
       <CourseGoals
-        title="Learn React with TS"
-        description="Refresh react with TS" />
+        title="Learn React with TS">
+          <p> Refresh your react knowledge with TS</p>
+        </CourseGoals>
     </main>
   )
 }
