@@ -1,5 +1,12 @@
+import Input from "./component/Input";
+
 function App() {
-  return <h1>Let's get started!</h1>;
+  return (
+    <>
+      <Input id="name" label="Your name" />
+      <Input id="age" label="Your age" />
+    </>
+  )
 }
 
 export default App;
