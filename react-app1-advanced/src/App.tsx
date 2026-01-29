@@ -1,12 +1,23 @@
-import { useRef } from "react";
+import Button from "./component/Button";
+import Form from "./component/Form";
 import Input from "./component/Input";
 
 function App() {
-  const input = useRef<HTMLInputElement>(null);
+  function handleSave(data: unknown) {
+    const extractedData = data as { name: string; age: string };
+    console.log(extractedData);
+  }
+
   return (
     <>
       <main>
-        <Input label="What day is it?" id="inp1" ref={input}></Input>
+        <Form onSave={handleSave}>
+          <Input id="name" label="Name" type="text"></Input>
+          <Input id="age" label="Age" type="Number"></Input>
+          <p>
+            <Button el="button">Save</Button>
+          </p>
+        </Form>
       </main>
     </>
   )
