@@ -1,13 +1,15 @@
-import Header from "./components/Header.tsx";
-import Shop from "./components/Shop.tsx";
-import Product from "./components/Product.tsx";
-import { DUMMY_PRODUCTS } from "./dummy-products.ts";
+import Header from './components/Header.tsx';
+import Shop from './components/Shop.tsx';
+import Product from './components/Product.tsx';
+import { DUMMY_PRODUCTS } from './dummy-products.ts';
 
-import "./App.css";
+import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './store/store.ts';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header />
       <Shop>
         {DUMMY_PRODUCTS.map((product) => (
@@ -16,7 +18,7 @@ function App() {
           </li>
         ))}
       </Shop>
-    </>
+    </Provider>
   );
 }
 
